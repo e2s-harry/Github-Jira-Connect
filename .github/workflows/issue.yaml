@@ -3,7 +3,7 @@ on: # GithubAction 트리거
   issues:
     types:
       - opened
-      -
+
 jobs:
   create-issue:
     name: Create Jira issue
@@ -25,7 +25,7 @@ jobs:
         uses: stefanbuck/github-issue-praser@v3
         id: issue-parser
         with:
-          template-path: .github/form.yaml
+          template-path: .github/ISSUE_TEMPLATE/form.yaml
 
       - name: Log Issue Parser
         run: |
